@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- html for updating tasks -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <style>
+      .column {
+        float: left;
+        width: 20%;
+        padding: 10px;`
+      }
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+</head>
+
+<body>
+
+{% block head %}
+<title>Task Manager</title>
+{% endblock %}
+
+{% block body %}
+<!-- form that allows users to update the title and deadline of a specfic task-->
+<div >
+    <h1>Update Task</h1>
+    <form action="/update/{{todo.id}}" method="post">
+        <input type="text" name="update_title" id="update_title" >
+        <input type="text" name="update_deadline" id="update_deadline" >
+        <input type="submit" value="Update">
+    </form>
+</div>
+
+{% endblock %}
+
+</body>
+
+</html>
