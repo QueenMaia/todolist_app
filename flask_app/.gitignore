@@ -2,3 +2,4 @@ todo.db
 __pycache__
 lib
 bin
+pyvenv.cfg
